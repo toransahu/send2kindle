@@ -4,10 +4,10 @@ import (
 	"os"
 
 	"github.com/lithammer/dedent"
-	"github.com/nikhil1raghav/kindle-send/classifier"
-	"github.com/nikhil1raghav/kindle-send/config"
-	"github.com/nikhil1raghav/kindle-send/handler"
-	"github.com/nikhil1raghav/kindle-send/util"
+	"github.com/toransahu/send2kindle/classifier"
+	"github.com/toransahu/send2kindle/config"
+	"github.com/toransahu/send2kindle/handler"
+	"github.com/toransahu/send2kindle/util"
 	"github.com/spf13/cobra"
 )
 
@@ -22,13 +22,13 @@ Supports multiple arguments. Each argument is downloaded as a separate file.`
 
 	exampleDownload = dedent.Dedent(`
 		# Download a single webpage
-		kindle-send download "http://paulgraham.com/alien.html"
+		send2kindle download "http://paulgraham.com/alien.html"
 
 		# Download multiple webpages
-		kindle-send download "http://paulgraham.com/alien.html" "http://paulgraham.com/hwh.html"
+		send2kindle download "http://paulgraham.com/alien.html" "http://paulgraham.com/hwh.html"
 
 		# Download webpage and collection of webpages
-		kindle-send download "http://paulgraham.com/alien.html" links.txt`,
+		send2kindle download "http://paulgraham.com/alien.html" links.txt`,
 	)
 )
 

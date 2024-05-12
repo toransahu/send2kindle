@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/nikhil1raghav/kindle-send/cmd"
+	"github.com/toransahu/send2kindle/cmd"
 )
 
 func main() {

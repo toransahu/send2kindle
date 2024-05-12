@@ -1,4 +1,4 @@
-module github.com/nikhil1raghav/kindle-send
+module github.com/toransahu/send2kindle
 
 go 1.18
 

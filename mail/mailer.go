@@ -1,11 +1,11 @@
 package mail
 
 import (
-	"github.com/nikhil1raghav/kindle-send/util"
+	"github.com/toransahu/send2kindle/util"
 	"os"
 	"time"
 
-	config "github.com/nikhil1raghav/kindle-send/config"
+	config "github.com/toransahu/send2kindle/config"
 
 	gomail "gopkg.in/mail.v2"
 )

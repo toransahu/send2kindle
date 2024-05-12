@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/nikhil1raghav/kindle-send/util"
+	"github.com/toransahu/send2kindle/util"
 )
 
 type config struct {
@@ -23,7 +23,7 @@ type config struct {
 
 const DefaultTimeout = 120
 const XdgConfigHome = "XDG_CONFIG_HOME"
-const ConfigFolderName = "kindle-send"
+const ConfigFolderName = "send2kindle"
 
 var instance *config
 

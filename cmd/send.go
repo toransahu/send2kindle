@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"github.com/lithammer/dedent"
-	"github.com/nikhil1raghav/kindle-send/classifier"
-	"github.com/nikhil1raghav/kindle-send/config"
-	"github.com/nikhil1raghav/kindle-send/handler"
-	"github.com/nikhil1raghav/kindle-send/util"
+	"github.com/toransahu/send2kindle/classifier"
+	"github.com/toransahu/send2kindle/config"
+	"github.com/toransahu/send2kindle/handler"
+	"github.com/toransahu/send2kindle/util"
 	"github.com/spf13/cobra"
 )
 
@@ -17,17 +17,17 @@ var (
 	helpLong = `Sends the files to ereader. If a link or a file containing links is given
 it will first download the webpage, convert into ebook and then send. 
 Each argument is sent as a separate file.
-kindle-send auto detects if argument is a link, collection of links or an ebook.`
+send2kindle auto detects if argument is a link, collection of links or an ebook.`
 
 	helpExample = dedent.Dedent(`
 		# Send a single webpage
-		kindle-send send "http://paulgraham.com/alien.html"
+		send2kindle send "http://paulgraham.com/alien.html"
 
 		# Send multiple webpages
-		kindle-send send "http://paulgraham.com/alien.html" "http://paulgraham.com/hwh.html"
+		send2kindle send "http://paulgraham.com/alien.html" "http://paulgraham.com/hwh.html"
 
 		# Send webpage, collection of webpages and an ebook
-		kindle-send download "http://paulgraham.com/alien.html" links.txt "Some Book.epub"`,
+		send2kindle download "http://paulgraham.com/alien.html" links.txt "Some Book.epub"`,
 	)
 )
 

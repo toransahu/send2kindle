@@ -11,8 +11,8 @@ import (
 	"github.com/bmaupin/go-epub"
 	"github.com/go-shiori/go-readability"
 	"github.com/gosimple/slug"
-	"github.com/nikhil1raghav/kindle-send/config"
-	"github.com/nikhil1raghav/kindle-send/util"
+	"github.com/toransahu/send2kindle/config"
+	"github.com/toransahu/send2kindle/util"
 )
 
 type epubmaker struct {
@@ -173,7 +173,7 @@ func Make(pageUrls []string, title string) (string, error) {
 	titleSlug := slug.Make(title)
 	var filename string
 	if len(titleSlug) == 0 {
-		filename = "kindle-send-doc-" + util.GetHash(readableArticles[0].Content) + ".epub"
+		filename = "send2kindle-doc-" + util.GetHash(readableArticles[0].Content) + ".epub"
 	} else {
 		filename = titleSlug + ".epub"
 	}

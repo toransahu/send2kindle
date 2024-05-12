@@ -1,5 +1,5 @@
 <p align = "center">
-<img src="assets/kindle-send-small.png" width="40%">
+<img src="assets/send2kindle-small.png" width="40%">
 </p>
 
 <p align = "center">
@@ -21,7 +21,7 @@
 
 ## Documentation
 
-`kindle-send` is a CLI tool to send files and webpages to your e-reader via e-mail. 
+`send2kindle` is a CLI tool to send files and webpages to your e-reader via e-mail. 
 
 Webpages are optimized for viewing on e-reader
 
@@ -38,7 +38,7 @@ Webpages are optimized for viewing on e-reader
 
 
 An epub is created from the url, then mailed to the kindle. Amazon converts that epub into azw3 for viewing on kindle.
-So you can use kindle-send, even if you're using a different ereader like Kobo and Remarkable if it supports pushing ebooks via email.
+So you can use send2kindle, even if you're using a different ereader like Kobo and Remarkable if it supports pushing ebooks via email.
 
 
 
@@ -46,32 +46,32 @@ So you can use kindle-send, even if you're using a different ereader like Kobo a
 
 ### Installation
 
-To run kindle-send you just need the compiled binary, no other dependency is required.
+To run send2kindle you just need the compiled binary, no other dependency is required.
 
 #### Brew
 
 Kindle-send can be installed via brew
 
 ```sh
-brew install nikhil1raghav/tap/kindle-send
+brew install toransahu/tap/send2kindle
 ```
 
 #### Download binary
 
-Download the binary for your operating system and architecture from [release page](https://github.com/nikhil1raghav/kindle-send/releases) and add it to your [PATH](https://en.wikipedia.org/wiki/PATH_(variable)).
+Download the binary for your operating system and architecture from [release page](https://github.com/toransahu/send2kindle/releases) and add it to your [PATH](https://en.wikipedia.org/wiki/PATH_(variable)).
 If there is no binary compatible for your system. Please create an issue.
 
 
 #### Go install
 
-If you have golang installed, you can also install kindle-send using
+If you have golang installed, you can also install send2kindle using
 
 ```sh
-go install github.com/nikhil1raghav/kindle-send@latest
+go install github.com/toransahu/send2kindle@latest
 ```
 
 
-For the first time when you run `kindle-send`, you need to answer some questions to create a configuration file, which has options like sender, receiver, password and path to store the generated files.
+For the first time when you run `send2kindle`, you need to answer some questions to create a configuration file, which has options like sender, receiver, password and path to store the generated files.
 
 
 If you're using gmail to send mails to kindle, consider creating an [app password](https://support.google.com/mail/answer/185833?hl=en-GB) and then using it.
@@ -85,10 +85,10 @@ If you're using gmail to send mails to kindle, consider creating an [app passwor
 
 __1. Send a file__
 
-Using `kindle-send` to mail an already existing file.
+Using `send2kindle` to mail an already existing file.
 
 ```sh
-kindle-send send Jane-eyre-Autobiography.epub
+send2kindle send Jane-eyre-Autobiography.epub
 ```
 
 
@@ -103,7 +103,7 @@ Quickly send a webpage to kindle
 
 
 ```sh
-kindle-send send http://paulgraham.com/hwh.html
+send2kindle send http://paulgraham.com/hwh.html
 ```
 
 <p align="center">
@@ -119,7 +119,7 @@ Create a text file with new line separated links of webpages and then all the we
 
 
 ```sh
-kindle-send send links.txt
+send2kindle send links.txt
 ```
 
 <p align="center">
@@ -132,7 +132,7 @@ __4. Send Multiple files at once__
 
 You can send multiple files or links at once.
 
-`kindle-send` auto detects the type of file and takes required action.
+`send2kindle` auto detects the type of file and takes required action.
 
 
 Each argument is sent as a separate file.
@@ -142,7 +142,7 @@ For example, the command below will send an html page (converted to ebook), an e
 
 
 ```sh
-kindle-send send http://paulgraham.com/hwh.html jane-eyre-autobiography.epub some-links.txt
+send2kindle send http://paulgraham.com/hwh.html jane-eyre-autobiography.epub some-links.txt
 ```
 
 
@@ -154,7 +154,7 @@ If you just want to save a webpage for reading later, replace `send` with `downl
 Example
 
 ```sh
-kindle-send download https://blog.maxgio.me/posts/linux-scheduler-journey/
+send2kindle download https://blog.maxgio.me/posts/linux-scheduler-journey/
 ```
 
 <p align="center">
@@ -174,7 +174,7 @@ Specify a different configuration file using `--config` or `-c` option. Configur
 
 When sending a collection of pages if no title is provided, volume takes the title of the first page.
 
-You can always get more information about usage of commands and options by typing `kindle-send help`
+You can always get more information about usage of commands and options by typing `send2kindle help`
 
 
 ---
@@ -189,7 +189,7 @@ Feel free to create an issue and then working on some feature, so that we don't 
 - [ ] Weekly RSS feed dump, when combined with `cron`
 - [ ] Better CSS & formatting for epub
 - [ ] Compressing images before embedding to reduce final file size
-- [ ] Simple UI form driven by CLI. Something like `kindle-send dashboard`.
+- [ ] Simple UI form driven by CLI. Something like `send2kindle dashboard`.
 - [x] Auto detect file type
 - [x] Option to download but not send the files
 - [x] Remove dependency on percollate and calibre
